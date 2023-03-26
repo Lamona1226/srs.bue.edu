@@ -1,0 +1,1003 @@
+<html><head> 
+<script> 
+ try { 
+ if(parent.headerFrame.document.getElementById('TRTranscript_')) 
+     if(parent.headerFrame.document.getElementById('TRTranscript_').getAttribute('objNav')) 
+         parent.headerFrame.document.getElementById('TRTranscript_').setAttribute('objNav', '-1'); 
+ } 
+ catch(err) { } 
+ </script><style> 
+ @import url("../../Css/style.css");  .TD1_1{font-family: Arial; font-size:11pt} .style1 {color: #990000; font-weight:bold;} 
+ .style2 { font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 12pt;  color: #336600;} 
+ .style3 {color: #003366; font-weight: bold;} 
+ .shadetabs{ 
+     padding: 3px; 
+     padding-left: 0;      margin-left: 0; 
+     margin-top: 1px; 
+     margin-bottom: 0; 
+     font: bold 12px Verdana; 
+     list-style-type: none; 
+     text-align: left 
+ } 
+  
+ .shadetabs li{ 
+     display: inline; 
+     margin: 0; 
+ 	float:left; 
+ } 
+  
+ .shadetabs li a{ 
+     text-decoration: none; 
+     padding: 3px; 
+     padding-right: 7px;      margin-right: 3px; 
+     border: 1px solid #777788; 
+     color: #2d2b2b; 
+     background: white url(../Images/shade.gif) top left repeat-x; 
+ } 
+  
+ .shadetabs li a:visited{ 
+     color: #2d2b2b; 
+ } 
+  
+ .shadetabs li a:hover{ 
+     text-decoration: underline; 
+     color: #2d2b2b; 
+ } 
+  
+ .shadetabs li.selected{ 
+     position: relative; 
+     top: 1px; 
+ } 
+  
+ .shadetabs li.selected a{ 
+     background-image: url(../Images/shadeactive.gif); 
+     border-bottom-color: white; 
+ } 
+  
+ .shadetabs li.selected a:hover { 
+     text-decoration: none; 
+ } 
+  
+ .tabcontentstyle { 
+     border: 1px solid gray; 
+     margin-bottom: 1em; 
+     padding: 10px; 
+     overflow-y: auto; 
+ } 
+  
+ .tabcontent { 
+     width: 100%; 
+     height: 250px; 
+     overflow-y: auto; 
+     border: 1px solid gray; 
+     display:none; 
+ 	float:left; 
+ } 
+  
+ @media print { 
+     .tabcontent { 
+         display:block!important; 
+ } 
+ } 
+ #over {background:  url(../../../Images/shadowlight.gif) repeat; 
+ 	 position: absolute;  
+ 	 left: 0; 
+ 	 top: 0; 
+ 	 z-index: 100; 
+ 	 width: 100%;  
+ 	 height: 100%; 
+ 	 margin: 0; 
+ 	 filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80); 
+ 	 -moz-opacity:0.80; 
+ 	 -khtml-opacity:0.80; 
+ 	 } 
+ #box, #box2, #box_, #box2___, #box2_n1 {  
+ 	height: 225px; 
+ 	overflow: none; 
+ 	border: 1px ridge black; 
+ 	z-index: 150;	 
+ 	background: #fff;	 
+ 	position: relative; 
+ 	padding: 10px;  
+ 	top: -5px; /* these two define the shadow 'offset'*/ 
+ 	left: -5px; /*...*/ 
+ 	  } 
+ #box2_ {  
+ 	height: 225px; 
+ 	overflow: none; 
+ 	border: 1px ridge black; 
+ 	z-index: 150;	 
+ 	background: #fff;	 
+ 	position: relative; 
+ 	padding: 10px;  
+ 	top: -5px; /* these two define the shadow 'offset'*/ 
+ 	left: -5px; /*...*/ 
+ 	  } 
+ #box2__ {  
+ 	height: 100px; 
+ 	overflow: none; 
+ 	border: 1px ridge black; 
+ 	z-index: 150;	 
+ 	background: #fff;	 
+ 	position: relative; 
+ 	padding: 10px;  
+ 	top: -5px; /* these two define the shadow 'offset'*/ 
+ 	left: -5px; /*...*/ 
+ 	  } 
+ .sh	{position: absolute; 
+ 	top:100px;	 
+ 	 z-index: 1000;	  
+ 	width: 350px;  
+ 	 right: 30%; 
+ 	 background: url(../../../Images/shadow.png) repeat !important; 
+ 	  background: url(../../../Images/shadowlight.gif) repeat; 
+ 	  } 
+ .bar {background: #ddd; 
+ 	  text-align: right; 
+ 	  margin: -5px; 
+ 	  padding: 5px }  
+   h1 { color: #006;} 
+ 	.bar2 {background: #ddd url(../../../Images/dragbar.gif) no-repeat center left; 
+       cursor:move; 
+ 	  margin: -5px; 
+ 	  padding: 5px }  
+ <!-- 
+  /* Font Definitions */ 
+  @font-face 
+ 	{font-family:Wingdings; 
+ 	panose-1:5 0 0 0 0 0 0 0 0 0; 
+ 	mso-font-charset:2; 
+ 	mso-generic-font-family:auto; 
+ 	mso-font-pitch:variable; 
+ 	mso-font-signature:0 268435456 0 0 -2147483648 0;} 
+ @font-face 
+ 	{font-family:Wingdings; 
+ 	panose-1:5 0 0 0 0 0 0 0 0 0; 
+ 	mso-font-charset:2; 
+ 	mso-generic-font-family:auto; 
+ 	mso-font-pitch:variable; 
+ 	mso-font-signature:0 268435456 0 0 -2147483648 0;} 
+ @font-face 
+ 	{font-family:Calibri; 
+ 	panose-1:2 15 5 2 2 2 4 3 2 4; 
+ 	mso-font-charset:0; 
+ 	mso-generic-font-family:swiss; 
+ 	mso-font-pitch:variable; 
+ 	mso-font-signature:-520092929 1073786111 9 0 415 0;} 
+  /* Style Definitions */ 
+  p.MsoNormal, li.MsoNormal, div.MsoNormal 
+ 	{mso-style-unhide:no; 
+ 	mso-style-qformat:yes; 
+ 	mso-style-parent:""; 
+ 	margin:0cm; 
+ 	margin-bottom:.0001pt; 
+ 	mso-pagination:widow-orphan; 
+ 	font-size:12.0pt; 
+ 	font-family:"Times New Roman","serif"; 
+ 	mso-fareast-font-family:"Times New Roman";} 
+ p.MsoHeader, li.MsoHeader, div.MsoHeader 
+ 	{mso-style-priority:99; 
+ 	mso-style-link:"Header Char"; 
+ 	margin:0cm; 
+ 	margin-bottom:.0001pt; 
+ 	mso-pagination:widow-orphan; 
+ 	tab-stops:center 234.0pt right 468.0pt; 
+ 	font-size:12.0pt; 
+ 	font-family:"Times New Roman","serif"; 
+ 	mso-fareast-font-family:"Times New Roman";} 
+ p.MsoFooter, li.MsoFooter, div.MsoFooter 
+ 	{mso-style-noshow:yes; 
+ 	mso-style-priority:99; 
+ 	mso-style-link:"Footer Char"; 
+ 	margin:0cm; 
+ 	margin-bottom:.0001pt; 
+ 	mso-pagination:widow-orphan; 
+ 	tab-stops:center 234.0pt right 468.0pt; 
+ 	font-size:12.0pt; 
+ 	font-family:"Times New Roman","serif"; 
+ 	mso-fareast-font-family:"Times New Roman";} 
+ span.HeaderChar 
+ 	{mso-style-name:"Header Char"; 
+ 	mso-style-priority:99; 
+ 	mso-style-unhide:no; 
+ 	mso-style-locked:yes; 
+ 	mso-style-link:Header; 
+ 	mso-bidi-font-size:12.0pt; 
+ 	font-family:"Times New Roman","serif"; 
+ 	mso-ascii-font-family:"Times New Roman"; 
+ 	mso-fareast-font-family:"Times New Roman"; 
+ 	mso-hansi-font-family:"Times New Roman"; 
+ 	mso-bidi-font-family:"Times New Roman";} 
+ span.FooterChar 
+ 	{mso-style-name:"Footer Char"; 
+ 	mso-style-noshow:yes; 
+ 	mso-style-priority:99; 
+ 	mso-style-unhide:no; 
+ 	mso-style-locked:yes; 
+ 	mso-style-link:Footer; 
+ 	mso-bidi-font-size:12.0pt; 
+ 	font-family:"Times New Roman","serif"; 
+ 	mso-ascii-font-family:"Times New Roman"; 
+ 	mso-fareast-font-family:"Times New Roman"; 
+ 	mso-hansi-font-family:"Times New Roman"; 
+ 	mso-bidi-font-family:"Times New Roman";} 
+ span.SpellE 
+ 	{mso-style-name:""; 
+ 	mso-spl-e:yes;} 
+ span.GramE 
+ 	{mso-style-name:""; 
+ 	mso-gram-e:yes;} 
+ .MsoChpDefault 
+ 	{mso-style-type:export-only; 
+ 	mso-default-props:yes; 
+ 	mso-ascii-font-family:Arial; 
+ 	mso-fareast-font-family:Calibri; 
+ 	mso-hansi-font-family:Arial;} 
+  /* Page Definitions */ 
+  @page 
+ 	{mso-footnote-separator:url("transcriptNotes_files/header.htm") fs; 
+ 	mso-footnote-continuation-separator:url("transcriptNotes_files/header.htm") fcs; 
+ 	mso-endnote-separator:url("transcriptNotes_files/header.htm") es; 
+ 	mso-endnote-continuation-separator:url("transcriptNotes_files/header.htm") ecs;} 
+ @page WordSection1 
+ 	{size:612.0pt 792.0pt; 
+ 	margin:72.0pt 90.0pt 72.0pt 90.0pt; 
+ 	mso-header-margin:35.4pt; 
+ 	mso-footer-margin:35.4pt; 
+ 	mso-even-header:url("transcriptNotes_files/header.htm") eh1; 
+ 	mso-header:url("transcriptNotes_files/header.htm") h1; 
+ 	mso-first-header:url("transcriptNotes_files/header.htm") fh1; 
+ 	mso-paper-source:0;} 
+ div.WordSection1 
+ 	{page:WordSection1;} 
+  /* List Definitions */ 
+  @list l0 
+ 	{mso-list-id:545415068; 
+ 	mso-list-type:hybrid; 
+ 	mso-list-template-ids:2091970122 67698699 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;} 
+ @list l0:level1 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:F0D8; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	margin-left:72.0pt; 
+ 	text-indent:-18.0pt; 
+ 	font-family:Wingdings;} 
+ @list l0:level2 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:o; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	margin-left:108.0pt; 
+ 	text-indent:-18.0pt; 
+ 	font-family:"Courier New";} 
+ @list l0:level3 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:F0A7; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	margin-left:144.0pt; 
+ 	text-indent:-18.0pt; 
+ 	font-family:Wingdings;} 
+ @list l0:level4 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:F0B7; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	margin-left:180.0pt; 
+ 	text-indent:-18.0pt; 
+ 	font-family:Symbol;} 
+ @list l0:level5 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:o; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	margin-left:216.0pt; 
+ 	text-indent:-18.0pt; 
+ 	font-family:"Courier New";} 
+ @list l0:level6 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:F0A7; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	margin-left:252.0pt; 
+ 	text-indent:-18.0pt; 
+ 	font-family:Wingdings;} 
+ @list l0:level7 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:F0B7; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	margin-left:288.0pt; 
+ 	text-indent:-18.0pt; 
+ 	font-family:Symbol;} 
+ @list l0:level8 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:o; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	margin-left:324.0pt; 
+ 	text-indent:-18.0pt; 
+ 	font-family:"Courier New";} 
+ @list l0:level9 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:F0A7; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	margin-left:360.0pt; 
+ 	text-indent:-18.0pt; 
+ 	font-family:Wingdings;} 
+ @list l1 
+ 	{mso-list-id:1338769524; 
+ 	mso-list-type:hybrid; 
+ 	mso-list-template-ids:950680160 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;} 
+ @list l1:level1 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:F0B7; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	text-indent:-18.0pt; 
+ 	font-family:Symbol;} 
+ @list l1:level2 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:o; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	text-indent:-18.0pt; 
+ 	font-family:"Courier New";} 
+ @list l1:level3 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:F0A7; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	text-indent:-18.0pt; 
+ 	font-family:Wingdings;} 
+ @list l1:level4 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:F0B7; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	text-indent:-18.0pt; 
+ 	font-family:Symbol;} 
+ @list l1:level5 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:o; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	text-indent:-18.0pt; 
+ 	font-family:"Courier New";} 
+ @list l1:level6 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:F0A7; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	text-indent:-18.0pt; 
+ 	font-family:Wingdings;} 
+ @list l1:level7 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:F0B7; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	text-indent:-18.0pt; 
+ 	font-family:Symbol;} 
+ @list l1:level8 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:o; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	text-indent:-18.0pt; 
+ 	font-family:"Courier New";} 
+ @list l1:level9 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:F0A7; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	text-indent:-18.0pt; 
+ 	font-family:Wingdings;} 
+ @list l2 
+ 	{mso-list-id:1501968670; 
+ 	mso-list-type:hybrid; 
+ 	mso-list-template-ids:-2052580780 67698693 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;} 
+ @list l2:level1 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:F0A7; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	margin-left:72.0pt; 
+ 	text-indent:-18.0pt; 
+ 	font-family:Wingdings;} 
+ @list l2:level2 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:o; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	margin-left:108.0pt; 
+ 	text-indent:-18.0pt; 
+ 	font-family:"Courier New";} 
+ @list l2:level3 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:F0A7; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	margin-left:144.0pt; 
+ 	text-indent:-18.0pt; 
+ 	font-family:Wingdings;} 
+ @list l2:level4 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:F0B7; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	margin-left:180.0pt; 
+ 	text-indent:-18.0pt; 
+ 	font-family:Symbol;} 
+ @list l2:level5 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:o; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	margin-left:216.0pt; 
+ 	text-indent:-18.0pt; 
+ 	font-family:"Courier New";} 
+ @list l2:level6 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:F0A7; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	margin-left:252.0pt; 
+ 	text-indent:-18.0pt; 
+ 	font-family:Wingdings;} 
+ @list l2:level7 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:F0B7; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	margin-left:288.0pt; 
+ 	text-indent:-18.0pt; 
+ 	font-family:Symbol;} 
+ @list l2:level8 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:o; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	margin-left:324.0pt; 
+ 	text-indent:-18.0pt; 
+ 	font-family:"Courier New";} 
+ @list l2:level9 
+ 	{mso-level-number-format:bullet; 
+ 	mso-level-text:F0A7; 
+ 	mso-level-tab-stop:none; 
+ 	mso-level-number-position:left; 
+ 	margin-left:360.0pt; 
+ 	text-indent:-18.0pt; 
+ 	font-family:Wingdings;} 
+ ol 
+ 	{margin-bottom:0cm;} 
+ ul 
+ 	{margin-bottom:0cm;} 
+ --> 
+</style> 
+ <script> 
+ function OnOff(TR) 
+ { 
+     var TRs = document.all.tags('TR'); 
+     var objDisable = !TR.diabled; 
+     for(var i = 0; i < TRs.length; i++) 
+     { 
+         if(TRs[i].EqMod) 
+         { 
+             if(TRs[i].EqMod != TR.EqMod) 
+                 TRs[i].disabled = !TRs[i].disabled; 
+         } 
+     } 
+ } 
+ function printD() 
+ { 
+     var pW = window.open("","PW", "width=750, height=550"); 
+     pW.document.write('<STYLE>  H2       {page-break-after: always}  @import url(\"../../Css/style.css\");  .TD1_1{font-family: Arial; font-size:11pt} .style1 {color: #990000; font-weight:bold;}  .style2 { font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 12pt;  color: #336600;}  .style3 {color: #003366; font-weight: bold;}  span  {font-size:10pt;font-family:\"Arabic Transparent\"}</STYLE> <body dir=ltr scroll=no leftmargin=0 rightmargin=0 topmargin=0 bottommargin=0   oncontextmenu="return false" onkeydown="if(event.keyCode==17 ) return false">'+document.all('dvPrint').innerHTML);var WebBrowser='<OBJECT ID=WebBrowser1 WIDTH=0 HEIGHT=0 '+'CLASSID=CLSID:8856F961-340A-11D0-A96B-00C04FD705A2></OBJECT>'; 
+     pW.document.body.insertAdjacentHTML('beforeEnd', WebBrowser); 
+     pW.WebBrowser1.ExecWB(7,1); 
+     pW.WebBrowser1.outerHTML=''; 
+ } 
+ function ShowModDiv(ObjID, ObjTitle, ObjData) 
+ { 
+     var spnTitleBox = document.getElementById('spnTitleBox'); 
+     spnTitleBox.innerHTML = ''; 
+     spnTitleBox.innerHTML = ObjTitle; 
+     var pContentBox = document.getElementById('pContentBox'); 
+     pContentBox.innerHTML = ''; 
+     pContentBox.innerHTML = ObjData; 
+     var tempX = event.clientX + document.body.scrollLeft - 150; 
+     var tempY = event.clientY + document.body.scrollTop - 150; 
+     document.getElementById('boxB').style.left = tempX; 
+     document.getElementById('boxB').style.top = tempY; 
+     var boxB = document.getElementById('boxB') 
+     boxB.style.display= '' ; 
+ } 
+ function HideModDiv() 
+ { 
+     var spnTitleBox = document.getElementById('spnTitleBox'); 
+     spnTitleBox.innerHTML = ''; 
+     var pContentBox = document.getElementById('pContentBox'); 
+     pContentBox.innerHTML = ''; 
+     var boxB = document.getElementById('boxB') 
+     boxB.style.display= 'none' ; 
+ } 
+ function expandCollapse() 
+ { 
+     for (var i=0; i<expandCollapse.arguments.length; i++) 
+     { 
+         var element = document.getElementById(expandCollapse.arguments[i]); 
+         element.style.display = (element.style.display == 'none') ? 'block' : 'none'; 
+     } 
+ } 
+ //***************************************************************************** 
+ // Do not remove this notice. 
+ // 
+ // Copyright 2001 by Mike Hall. 
+ // See http://www.brainjar.com for terms of use. 
+ //***************************************************************************** 
+   
+ // Determine browser and version. 
+   
+ function Browser() { 
+   
+   var ua, s, i; 
+   
+   this.isIE    = false; 
+   this.isNS    = false; 
+   this.version = null; 
+   
+   ua = navigator.userAgent; 
+   
+   s = "MSIE"; 
+   if ((i = ua.indexOf(s)) >= 0) { 
+     this.isIE = true; 
+     this.version = parseFloat(ua.substr(i + s.length)); 
+     return; 
+   } 
+   
+   s = "Netscape6/"; 
+   if ((i = ua.indexOf(s)) >= 0) { 
+     this.isNS = true; 
+     this.version = parseFloat(ua.substr(i + s.length)); 
+     return; 
+   } 
+   
+   // Treat any other "Gecko" browser as NS 6.1. 
+   
+   s = "Gecko"; 
+   if ((i = ua.indexOf(s)) >= 0) { 
+     this.isNS = true; 
+     this.version = 6.1; 
+     return; 
+   } 
+ } 
+   
+ var browser = new Browser(); 
+   
+ // Global object to hold drag information. 
+   
+ var dragObj = new Object(); 
+ dragObj.zIndex = 1000; 
+   
+ function dragStart(event, id) { 
+   
+   var el; 
+   var x, y; 
+   
+   // If an element id was given, find it. Otherwise use the element being 
+   // clicked on. 
+   
+   if (id) 
+     dragObj.elNode = document.getElementById(id); 
+   else { 
+     if (browser.isIE) 
+       dragObj.elNode = window.event.srcElement; 
+     if (browser.isNS) 
+       dragObj.elNode = event.target; 
+   
+     // If this is a text node, use its parent element. 
+   
+     if (dragObj.elNode.nodeType == 3) 
+       dragObj.elNode = dragObj.elNode.parentNode; 
+   } 
+   
+   // Get cursor position with respect to the page. 
+   
+   if (browser.isIE) { 
+     x = window.event.clientX + document.documentElement.scrollLeft 
+       + document.body.scrollLeft; 
+     y = window.event.clientY + document.documentElement.scrollTop 
+       + document.body.scrollTop; 
+   } 
+   if (browser.isNS) { 
+     x = event.clientX + window.scrollX; 
+     y = event.clientY + window.scrollY; 
+   } 
+   
+   // Save starting positions of cursor and element. 
+   
+   dragObj.cursorStartX = x; 
+   dragObj.cursorStartY = y; 
+   dragObj.elStartLeft  = parseInt(dragObj.elNode.style.left, 10); 
+   dragObj.elStartTop   = parseInt(dragObj.elNode.style.top,  10); 
+   
+   if (isNaN(dragObj.elStartLeft)) dragObj.elStartLeft = 0; 
+   if (isNaN(dragObj.elStartTop))  dragObj.elStartTop  = 0; 
+   
+   // Update element's z-index. 
+   
+   dragObj.elNode.style.zIndex = ++dragObj.zIndex; 
+   
+   // Capture mousemove and mouseup events on the page. 
+   
+   if (browser.isIE) { 
+     document.attachEvent("onmousemove", dragGo); 
+     document.attachEvent("onmouseup",   dragStop); 
+     window.event.cancelBubble = true; 
+     window.event.returnValue = false; 
+   } 
+   if (browser.isNS) { 
+     document.addEventListener("mousemove", dragGo,   true); 
+     document.addEventListener("mouseup",   dragStop, true); 
+     event.preventDefault(); 
+   } 
+ } 
+   
+ function dragGo(event) { 
+   
+   var x, y; 
+   
+   // Get cursor position with respect to the page. 
+   
+   if (browser.isIE) { 
+     x = window.event.clientX + document.documentElement.scrollLeft 
+       + document.body.scrollLeft; 
+     y = window.event.clientY + document.documentElement.scrollTop 
+       + document.body.scrollTop; 
+   } 
+   if (browser.isNS) { 
+     x = event.clientX + window.scrollX; 
+     y = event.clientY + window.scrollY; 
+   } 
+   
+   // Move drag element by the same amount the cursor has moved. 
+   
+   dragObj.elNode.style.left = (dragObj.elStartLeft + x - dragObj.cursorStartX) + "px"; 
+   dragObj.elNode.style.top  = (dragObj.elStartTop  + y - dragObj.cursorStartY) + "px"; 
+   
+   if (browser.isIE) { 
+     window.event.cancelBubble = true; 
+     window.event.returnValue = false; 
+   } 
+   if (browser.isNS) 
+     event.preventDefault(); 
+ } 
+   
+ function dragStop(event) { 
+   
+   // Stop capturing mousemove and mouseup events. 
+   
+   if (browser.isIE) { 
+     document.detachEvent("onmousemove", dragGo); 
+     document.detachEvent("onmouseup",   dragStop); 
+   } 
+   if (browser.isNS) { 
+     document.removeEventListener("mousemove", dragGo,   true); 
+     document.removeEventListener("mouseup",   dragStop, true); 
+   } 
+ } 
+   
+ //]]> 
+ </script> 
+</head> 
+<body dir="ltr" oncontextmenu="return false;" style="margin:5 5 5 5;" marginwidth="0" marginheight="0"><div><div id="over" style="display:none;"></div> <div id="boxB" class="sh" style="left:200px;top:150px; display: none;">   <div id="box2"><div class="bar2" onmousedown="dragStart(event, 'boxB')" style="background-color:#B6D3E9"> <table width="100%"><tbody><tr><td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="spnTitleBox" style="font-weight:bold">XXX</span>&nbsp;</td><td align="right"><img id="imgColose" src="../../Images/Close.gif" style="cursor:hand;height:20" onclick="HideModDiv()"></td></tr></tbody></table></div>  <p id="pContentBox">XXX</p>  </div>  </div> <div><button onclick="printD()" style="position:absolute;top:0;right:20;width:80; border:1px outset;FONT-FAMILY:tahoma,sans-serif;FONT-SIZE:11px;BACKGROUND:#e2f3ff;color:darkred;CURSOR:HAND;">Print</button> <button id="bu2" style="display:none;position:absolute;top:0;right:120;width:100;border:1px outset;FONT-FAMILY:tahoma,sans-serif;FONT-SIZE:11px; BACKGROUND:#e2f3ff; color:darkred;CURSOR:HAND;z-Index:2;" onclick="parent.FSReport(0);this.style.display='none';bu1.style.display=''">Menus</button> 
+<br> 
+</div><br> 
+<div id="dvPrint" name="dvPrint" width="100%"> 
+<br><table dir="ltr" style="font-weight:normal;font-family:Tahoma;text-align:right;overflow:auto;" width="100%" direction="right" cellpadding="2"> <tbody><tr style="FONT-SIZE:14px">         <td align="center" width="25%">&nbsp;&nbsp;&nbsp;<img src="https://srs.bue.edu.eg/bue/Images/BUE_logo.jpg" unselectable="on"><br><b><font style="font-size:9 pt" face="Arial, Helvetica, microsoft sans serif">&nbsp;&nbsp;&nbsp;British University in Egypt</font></b></td>         <td align="center"><b><font size="3" face="Arial, Helvetica, microsoft sans serif" color="darkblue">Interim Transcript </font></b></td>         <td width="100" align="center"><font size="1" face="tahoma"><b>(1/3)<br></b></font></td>     </tr>          <tr>         <td colspan="3" align="right" style="FONT-SIZE:9px"><font size="1">Ibn Al-Haitham Students Information System, 21/3/2023 - 16:17 </font></td> 
+    </tr>  </tbody></table> <hr><div align="center" style="margin-top:5px;margin-bottom:5px;"><span class="style2"></span><div align="left"><table><tbody><tr><td align="left" id="" style="color:black;"><span>Student ID</span></td> 
+<td align="left" id="" style="color:black;"><span> :<font style="font-weight:bold">225721</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Student Name</span></td> 
+<td align="left" id="" style="color:black;"><span> :<font style="font-weight:bold">Ahmed Fouad Shaban Elkomy Hamouda</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Birth Date</span></td> 
+<td align="left" id="" style="color:black;"><span> :<font style="font-weight:bold">19/5/2003</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Nationality</span></td> 
+<td align="left" id="" style="color:black;"><span> :<font style="font-weight:bold">Egypt</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Faculty</span></td> 
+<td align="left" id="" style="color:black;"><span>:<font style="font-weight:bold">Faculty of Business Administration, Economics &amp; Political Science</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Award Programme</span></td> 
+<td align="left" id="" style="color:black;"><span>:<font style="font-weight:bold">Business Studies</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Marking/Classification Scale</span></td> 
+<td align="left" id="" style="color:black;"><span>:<font style="font-weight:bold">UK</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Awarded Degree</span></td> <td align="left" id="" style="color:black;"><span>:<font style="font-weight:bold;">UK</font></span></td> </tr><tr><td align="left" id="" style="color:black;"><span>Current Academic Standing</span></td> <td align="left" id="" style="color:black;"><span>:<font style="font-weight:bold;"></font></span></td> </tr></tbody></table></div><br><table width="100%"><tbody><tr><td colspan="10" style="font-family:arial;font-weight:bold;font-size:10pt">Preparatory Year  2022-2023</td></tr></tbody></table></div><table id="StuCourses" name="StuCourses" border="1" align="center" cellpadding="2" cellspacing="0" bordercolor="black" bgcolor="FFFEF9" width="100%" style="background-image:url(../../../Images/watermark.gif); background-repeat:no-repeat;background-position: center center"> 
+<tbody><tr><td colspan="10" style="color:#000055;" class="style1">Semester 1</td></tr><tr bgcolor="#FEFADE"><td align="center" id="" style="color:black;"><span class="style1">Module<br>Code</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Module Name</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Module<br>Level</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Module<br>Credit</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Assessments</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Student<br>Mark</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Grade</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Compensation<br>Marks</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">P/F</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Credit<br>Award</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Attempts</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Status</span></td> 
+</tr><tr eqmod="11835." onclick="OnOff(this)" style="cursor:hand;"><td align="left" id="" style="color:black;"><span>&nbsp;22BBST01P</span></td> 
+<td align="left" id="" style="color:black;"><span>&nbsp;Introduction to Business</span></td> 
+<td align="center" id="" style="color:black;"><span>&nbsp;P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="left" id="" style="color:black;"><span><table width="100%"><tbody><tr bgcolor="#FEFADE"><td>Unseen Exam</td><td>&nbsp;47</td></tr><tr><td>Project</td><td>&nbsp;40</td></tr><tr bgcolor="#FEFADE"><td>Assignments</td><td>&nbsp;26</td></tr></tbody></table></span></td> 
+<td align="center" id="" style="color:black;"><span>47</span></td> 
+<td align="center" id="" style="color:black;"><span>D</span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span>P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="center" id="" style="color:black;"><span>1</span></td> 
+<td align="center" id="" style="color:black;"><span><span style="color:#000055;font-size:10pt; "></span></span></td> 
+</tr><tr eqmod="11471." onclick="OnOff(this)" style="cursor:hand;"><td align="left" id="" style="color:black;"><span>&nbsp;22BBST05P</span></td> 
+<td align="left" id="" style="color:black;"><span>&nbsp;Introduction to Information Technology</span></td> 
+<td align="center" id="" style="color:black;"><span>&nbsp;P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="left" id="" style="color:black;"><span><table><tbody><tr><td>Assignments</td><td>&nbsp;27</td></tr><tr bgcolor="#FEFADE"><td>Project</td><td>&nbsp;20</td></tr><tr><td>Unseen Exam</td><td>&nbsp;40</td></tr></tbody></table></span></td> 
+<td align="center" id="" style="color:black;"><span>42</span></td> 
+<td align="center" id="" style="color:black;"><span>D-</span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span>P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="center" id="" style="color:black;"><span>1</span></td> 
+<td align="center" id="" style="color:black;"><span><span style="color:#000055;font-size:10pt; "></span></span></td> 
+</tr><tr eqmod="11831." onclick="OnOff(this)" style="cursor:hand;"><td align="left" id="" style="color:black;"><span>&nbsp;22BBST04P</span></td> 
+<td align="left" id="" style="color:black;"><span>&nbsp;Business Math</span></td> 
+<td align="center" id="" style="color:black;"><span>&nbsp;P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="left" id="" style="color:black;"><span><table><tbody><tr bgcolor="#FEFADE"><td>Unseen Exam</td><td>&nbsp;40</td></tr><tr><td>Class Test</td><td>&nbsp;21</td></tr><tr bgcolor="#FEFADE"><td>Assignments</td><td>&nbsp;26</td></tr></tbody></table></span></td> 
+<td align="center" id="" style="color:black;"><span>41</span></td> 
+<td align="center" id="" style="color:black;"><span>D-</span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span>P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="center" id="" style="color:black;"><span>1</span></td> 
+<td align="center" id="" style="color:black;"><span><span style="color:#000055;font-size:10pt; "></span></span></td> 
+</tr><tr eqmod="11470." onclick="OnOff(this)" style="cursor:hand;"><td align="left" id="" style="color:black;"><span>&nbsp;22BBST03P</span></td> 
+<td align="left" id="" style="color:black;"><span>&nbsp;Business Communication</span></td> 
+<td align="center" id="" style="color:black;"><span>&nbsp;P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="left" id="" style="color:black;"><span><table><tbody><tr><td>Group Project</td><td>&nbsp;54</td></tr><tr bgcolor="#FEFADE"><td>Assignments</td><td>&nbsp;26</td></tr><tr><td>Unseen Exam</td><td>&nbsp;40</td></tr></tbody></table></span></td> 
+<td align="center" id="" style="color:black;"><span>51</span></td> 
+<td align="center" id="" style="color:black;"><span>C-</span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span>P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="center" id="" style="color:black;"><span>1</span></td> 
+<td align="center" id="" style="color:black;"><span><span style="color:#000055;font-size:10pt; "></span></span></td> 
+</tr><tr eqmod="11834." onclick="OnOff(this)" style="cursor:hand;"><td align="left" id="" style="color:black;"><span>&nbsp;22BBST02P</span></td> 
+<td align="left" id="" style="color:black;"><span>&nbsp;Introduction to Behavioural Sciences</span></td> 
+<td align="center" id="" style="color:black;"><span>&nbsp;P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="left" id="" style="color:black;"><span><table><tbody><tr bgcolor="#FEFADE"><td>Unseen Exam</td><td>&nbsp;40</td></tr><tr><td>Assignments</td><td>&nbsp;38</td></tr><tr bgcolor="#FEFADE"><td>Project</td><td>&nbsp;41</td></tr></tbody></table></span></td> 
+<td align="center" id="" style="color:black;"><span>45</span></td> 
+<td align="center" id="" style="color:black;"><span>D</span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span>P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="center" id="" style="color:black;"><span>1</span></td> 
+<td align="center" id="" style="color:black;"><span><span style="color:#000055;font-size:10pt; "></span></span></td> 
+</tr><tr eqmod="11833." onclick="OnOff(this)" style="cursor:hand;"><td align="left" id="" style="color:black;"><span>&nbsp;22BAENGL01</span></td> 
+<td align="left" id="" style="color:black;"><span>&nbsp;English for Academic Purposes (Business Administration)</span></td> 
+<td align="center" id="" style="color:black;"><span>&nbsp;P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="left" id="" style="color:black;"><span><table><tbody><tr><td>Unseen Exam</td><td>&nbsp;</td></tr><tr bgcolor="#FEFADE"><td>Coursework</td><td>&nbsp;</td></tr></tbody></table></span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span>P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="center" id="" style="color:black;"><span>1</span></td> 
+<td align="center" id="" style="color:black;"><span><span style="color:#000055;font-size:10pt; ">E</span></span></td> 
+</tr></tbody></table><div id="225721÷2022÷Preparatory Year" name="225721÷2022÷Preparatory Year" style="page-break-after:always;"></div><br><table dir="ltr" style="font-weight:normal;font-family:Tahoma;text-align:right;overflow:auto;" width="100%" direction="right" cellpadding="2"> <tbody><tr style="FONT-SIZE:14px">         <td align="center" width="25%">&nbsp;&nbsp;&nbsp;<img src="https://srs.bue.edu.eg/bue/Images/BUE_logo.jpg" unselectable="on"><br><b><font style="font-size:9 pt" face="Arial, Helvetica, microsoft sans serif">&nbsp;&nbsp;&nbsp;British University in Egypt</font></b></td>         <td align="center"><b><font size="3" face="Arial, Helvetica, microsoft sans serif" color="darkblue">Interim Transcript </font></b></td>         <td width="100" align="center"><font size="1" face="tahoma"><b>(2/3)<br></b></font></td>     </tr>          <tr>         <td colspan="3" align="right" style="FONT-SIZE:9px"><font size="1">Ibn Al-Haitham Students Information System, 21/3/2023 - 16:17 </font></td> 
+    </tr>  </tbody></table> <hr><div align="center" style="margin-top:5px;margin-bottom:5px;"><span class="style2"></span><div align="left"><table><tbody><tr><td align="left" id="" style="color:black;"><span>Student ID</span></td> 
+<td align="left" id="" style="color:black;"><span> :<font style="font-weight:bold">225721</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Student Name</span></td> 
+<td align="left" id="" style="color:black;"><span> :<font style="font-weight:bold">Ahmed Fouad Shaban Elkomy Hamouda</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Birth Date</span></td> 
+<td align="left" id="" style="color:black;"><span> :<font style="font-weight:bold">19/5/2003</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Nationality</span></td> 
+<td align="left" id="" style="color:black;"><span> :<font style="font-weight:bold">Egypt</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Faculty</span></td> 
+<td align="left" id="" style="color:black;"><span>:<font style="font-weight:bold">Faculty of Arts &amp; Humanities</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Award Programme</span></td> 
+<td align="left" id="" style="color:black;"><span>:<font style="font-weight:bold">Psychology</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Marking/Classification Scale</span></td> 
+<td align="left" id="" style="color:black;"><span>:<font style="font-weight:bold">UK</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Awarded Degree</span></td> <td align="left" id="" style="color:black;"><span>:<font style="font-weight:bold;">UK</font></span></td> </tr><tr><td align="left" id="" style="color:black;"><span>Current Academic Standing</span></td> <td align="left" id="" style="color:black;"><span>:<font style="font-weight:bold;">Repeat</font></span></td> </tr></tbody></table></div><br><table width="100%"><tbody><tr><td colspan="10" style="font-family:arial;font-weight:bold;font-size:10pt">Preparatory Year  2021-2022</td></tr></tbody></table></div><table id="StuCourses" name="StuCourses" border="1" align="center" cellpadding="2" cellspacing="0" bordercolor="black" bgcolor="FFFEF9" width="100%" style="background-image:url(../../../Images/watermark.gif); background-repeat:no-repeat;background-position: center center"> 
+<tbody><tr><td colspan="10" style="color:#000055;" class="style1">Semester 1</td></tr><tr bgcolor="#FEFADE"><td align="center" id="" style="color:black;"><span class="style1">Module<br>Code</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Module Name</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Module<br>Level</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Module<br>Credit</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Assessments</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Student<br>Mark</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Grade</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Compensation<br>Marks</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">P/F</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Credit<br>Award</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Attempts</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Status</span></td> 
+</tr><tr eqmod="9494." onclick="OnOff(this)" style="cursor:hand;"><td align="left" id="" style="color:black;"><span>&nbsp;21PSYENGL01</span></td> 
+<td align="left" id="" style="color:black;"><span>&nbsp;English for Academic Purposes (Psychology)</span></td> 
+<td align="center" id="" style="color:black;"><span>&nbsp;P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="left" id="" style="color:black;"><span><table width="100%"><tbody><tr bgcolor="#FEFADE"><td>Unseen Exam</td><td>&nbsp;63</td></tr><tr><td>Grp Presentation</td><td>&nbsp;</td></tr><tr bgcolor="#FEFADE"><td>Class Test</td><td>&nbsp;67</td></tr><tr><td>Listening</td><td>&nbsp;60</td></tr></tbody></table></span></td> 
+<td align="center" id="" style="color:black;"><span>54</span></td> 
+<td align="center" id="" style="color:black;"><span>C</span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span>P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span><span style="color:#000055;font-size:10pt; ">IN</span></span></td> 
+</tr><tr eqmod="9495." onclick="OnOff(this)" style="cursor:hand;"><td align="left" id="" style="color:black;"><span>&nbsp;21PSYC05P</span></td> 
+<td align="left" id="" style="color:black;"><span>&nbsp;Introduction to Computing/ICT-1/</span></td> 
+<td align="center" id="" style="color:black;"><span>&nbsp;P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="left" id="" style="color:black;"><span><table><tbody><tr bgcolor="#FEFADE"><td>Unseen Exam</td><td>&nbsp;24</td></tr><tr><td>Grp Presentation</td><td>&nbsp;60</td></tr><tr bgcolor="#FEFADE"><td>Class Test</td><td>&nbsp;50</td></tr></tbody></table></span></td> 
+<td align="center" id="" style="color:black;"><span>40</span></td> 
+<td align="center" id="" style="color:black;"><span>D-</span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span>P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span><span style="color:#000055;font-size:10pt; ">IN</span></span></td> 
+</tr><tr eqmod="10575." onclick="OnOff(this)" style="cursor:hand;"><td align="left" id="" style="color:black;"><span>&nbsp;21PSYC03P</span></td> 
+<td align="left" id="" style="color:black;"><span>&nbsp;Psychology Applications in Real Life</span></td> 
+<td align="center" id="" style="color:black;"><span>&nbsp;P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="left" id="" style="color:black;"><span><table><tbody><tr><td>Unseen Exam</td><td>&nbsp;17</td></tr><tr bgcolor="#FEFADE"><td>Essay</td><td>&nbsp;69</td></tr><tr><td>Class Test</td><td>&nbsp;5</td></tr></tbody></table></span></td> 
+<td align="center" id="" style="color:black;"><span>32</span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span><span style="color:#000055;font-size:10pt; ">IN</span></span></td> 
+</tr><tr eqmod="9496." onclick="OnOff(this)" style="cursor:hand;"><td align="left" id="" style="color:black;"><span>&nbsp;21PSYC01P</span></td> 
+<td align="left" id="" style="color:black;"><span>&nbsp;Introduction to Psychology(1)</span></td> 
+<td align="center" id="" style="color:black;"><span>&nbsp;P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="left" id="" style="color:black;"><span><table><tbody><tr bgcolor="#FEFADE"><td>Unseen Exam</td><td>&nbsp;42</td></tr><tr><td>Project 1</td><td>&nbsp;52</td></tr><tr bgcolor="#FEFADE"><td>Project 2</td><td>&nbsp;</td></tr></tbody></table></span></td> 
+<td align="center" id="" style="color:black;"><span>30</span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span><span style="color:#000055;font-size:10pt; ">IN</span></span></td> 
+</tr><tr eqmod="9498." onclick="OnOff(this)" style="cursor:hand;"><td align="left" id="" style="color:black;"><span>&nbsp;21PSYC04P</span></td> 
+<td align="left" id="" style="color:black;"><span>&nbsp;Psychology of Adjustment</span></td> 
+<td align="center" id="" style="color:black;"><span>&nbsp;P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="left" id="" style="color:black;"><span><table><tbody><tr><td>Unseen Exam</td><td>&nbsp;24</td></tr><tr bgcolor="#FEFADE"><td>Individual Project</td><td>&nbsp;</td></tr><tr><td>Grp Presentation</td><td>&nbsp;38</td></tr></tbody></table></span></td> 
+<td align="center" id="" style="color:black;"><span>21</span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span><span style="color:#000055;font-size:10pt; ">IN</span></span></td> 
+</tr><tr eqmod="10574." onclick="OnOff(this)" style="cursor:hand;"><td align="left" id="" style="color:black;"><span>&nbsp;21PSYC02P</span></td> 
+<td align="left" id="" style="color:black;"><span>&nbsp;Critical Readings in Humanities</span></td> 
+<td align="center" id="" style="color:black;"><span>&nbsp;P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="left" id="" style="color:black;"><span><table><tbody><tr bgcolor="#FEFADE"><td>Unseen Exam</td><td>&nbsp;25</td></tr><tr><td>Essay</td><td>&nbsp;</td></tr><tr bgcolor="#FEFADE"><td>Class Test</td><td>&nbsp;7</td></tr></tbody></table></span></td> 
+<td align="center" id="" style="color:black;"><span>12</span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span><span style="color:#000055;font-size:10pt; ">IN</span></span></td> 
+</tr><tr><td colspan="10" style="color:#000055;" class="style1">Semester 2</td></tr><tr bgcolor="#FEFADE"><td align="center" id="" style="color:black;"><span class="style1">Module<br>Code</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Module Name</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Module<br>Level</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Module<br>Credit</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Assessments</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Student<br>Mark</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Grade</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Compensation<br>Marks</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">P/F</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Credit<br>Award</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Attempts</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Status</span></td> 
+</tr><tr eqmod="10577." onclick="OnOff(this)" style="cursor:hand;"><td align="left" id="" style="color:black;"><span>&nbsp;21PSYC10P</span></td> 
+<td align="left" id="" style="color:black;"><span>&nbsp;Descriptive Statistics in Psychology</span></td> 
+<td align="center" id="" style="color:black;"><span>&nbsp;P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="left" id="" style="color:black;"><span><table width="100%"><tbody><tr><td>Class Test</td><td>&nbsp;</td></tr><tr bgcolor="#FEFADE"><td>Project</td><td>&nbsp;80</td></tr><tr><td>Unseen Exam</td><td>&nbsp;10</td></tr></tbody></table></span></td> 
+<td align="center" id="" style="color:black;"><span>32</span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span><span style="color:#000055;font-size:10pt; ">IN</span></span></td> 
+</tr><tr eqmod="10579." onclick="OnOff(this)" style="cursor:hand;"><td align="left" id="" style="color:black;"><span>&nbsp;21PSYC09P</span></td> 
+<td align="left" id="" style="color:black;"><span>&nbsp;Social Psychology</span></td> 
+<td align="center" id="" style="color:black;"><span>&nbsp;P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="left" id="" style="color:black;"><span><table><tbody><tr bgcolor="#FEFADE"><td>Class Test</td><td>&nbsp;20</td></tr><tr><td>Project</td><td>&nbsp;30</td></tr><tr bgcolor="#FEFADE"><td>Unseen Exam</td><td>&nbsp;37</td></tr></tbody></table></span></td> 
+<td align="center" id="" style="color:black;"><span>30</span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span><span style="color:#000055;font-size:10pt; ">IN</span></span></td> 
+</tr><tr eqmod="10578." onclick="OnOff(this)" style="cursor:hand;"><td align="left" id="" style="color:black;"><span>&nbsp;21PYSC06P</span></td> 
+<td align="left" id="" style="color:black;"><span>&nbsp;Introduction to Psychology (2)</span></td> 
+<td align="center" id="" style="color:black;"><span>&nbsp;P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="left" id="" style="color:black;"><span><table><tbody><tr><td>Project</td><td>&nbsp;</td></tr><tr bgcolor="#FEFADE"><td>Class Test</td><td>&nbsp;46</td></tr><tr><td>Unseen Exam</td><td>&nbsp;22</td></tr></tbody></table></span></td> 
+<td align="center" id="" style="color:black;"><span>25</span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span><span style="color:#000055;font-size:10pt; ">IN</span></span></td> 
+</tr><tr eqmod="9492." onclick="OnOff(this)" style="cursor:hand;"><td align="left" id="" style="color:black;"><span>&nbsp;21PSYC07P</span></td> 
+<td align="left" id="" style="color:black;"><span>&nbsp;Developmental Psychology: Childhood and Adolescence</span></td> 
+<td align="center" id="" style="color:black;"><span>&nbsp;P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="left" id="" style="color:black;"><span><table><tbody><tr bgcolor="#FEFADE"><td>Case Study</td><td>&nbsp;</td></tr><tr><td>Critical Reflections</td><td>&nbsp;</td></tr><tr bgcolor="#FEFADE"><td>Unseen Exam</td><td>&nbsp;28</td></tr></tbody></table></span></td> 
+<td align="center" id="" style="color:black;"><span>11</span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span><span style="color:#000055;font-size:10pt; ">IN</span></span></td> 
+</tr><tr eqmod="9493." onclick="OnOff(this)" style="cursor:hand;"><td align="left" id="" style="color:black;"><span>&nbsp;21PSYENGL02</span></td> 
+<td align="left" id="" style="color:black;"><span>&nbsp;English and Academic Writing (Psychology)</span></td> 
+<td align="center" id="" style="color:black;"><span>&nbsp;P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="left" id="" style="color:black;"><span><table><tbody><tr><td>Presentation</td><td>&nbsp;</td></tr><tr bgcolor="#FEFADE"><td>Final Essay</td><td>&nbsp;</td></tr><tr><td>Written Assignments</td><td>&nbsp;</td></tr><tr bgcolor="#FEFADE"><td>Class Tests</td><td>&nbsp;30</td></tr></tbody></table></span></td> 
+<td align="center" id="" style="color:black;"><span>6</span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span><span style="color:#000055;font-size:10pt; ">IN</span></span></td> 
+</tr><tr eqmod="10576." onclick="OnOff(this)" style="cursor:hand;"><td align="left" id="" style="color:black;"><span>&nbsp;21PSYC08P</span></td> 
+<td align="left" id="" style="color:black;"><span>&nbsp;Positive Psychology</span></td> 
+<td align="center" id="" style="color:black;"><span>&nbsp;P</span></td> 
+<td align="center" id="" style="color:black;"><span>10</span></td> 
+<td align="left" id="" style="color:black;"><span><table><tbody><tr><td>Project</td><td>&nbsp;</td></tr><tr bgcolor="#FEFADE"><td>Essay</td><td>&nbsp;</td></tr><tr><td>Unseen Exam</td><td>&nbsp;10</td></tr></tbody></table></span></td> 
+<td align="center" id="" style="color:black;"><span>4</span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span></span></td> 
+<td align="center" id="" style="color:black;"><span>F</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span>0</span></td> 
+<td align="center" id="" style="color:black;"><span><span style="color:#000055;font-size:10pt; ">IN</span></span></td> 
+</tr></tbody></table><div style="page-break-before: always;"></div><br><table dir="ltr" style="font-weight:normal;font-family:Tahoma;text-align:right;overflow:auto;" width="100%" direction="right" cellpadding="2"> <tbody><tr style="FONT-SIZE:14px">         <td align="center" width="25%">&nbsp;&nbsp;&nbsp;<img src="https://srs.bue.edu.eg/bue/Images/BUE_logo.jpg" unselectable="on"><br><b><font style="font-size:9 pt" face="Arial, Helvetica, microsoft sans serif">&nbsp;&nbsp;&nbsp;British University in Egypt</font></b></td>         <td align="center"><b><font size="3" face="Arial, Helvetica, microsoft sans serif" color="darkblue">Interim Transcript </font></b></td>         <td width="100" align="center"><font size="1" face="tahoma"><b>(3/3)<br></b></font></td>     </tr>          <tr>         <td colspan="3" align="right" style="FONT-SIZE:9px"><font size="1">Ibn Al-Haitham Students Information System, 21/3/2023 - 16:17 </font></td> 
+    </tr>  </tbody></table> <hr><div align="center" style="margin-top:5px;margin-bottom:5px;"><span class="style2"></span><div align="left"><table><tbody><tr><td align="left" id="" style="color:black;"><span>Student ID</span></td> 
+<td align="left" id="" style="color:black;"><span> :<font style="font-weight:bold">225721</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Student Name</span></td> 
+<td align="left" id="" style="color:black;"><span> :<font style="font-weight:bold">Ahmed Fouad Shaban Elkomy Hamouda</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Birth Date</span></td> 
+<td align="left" id="" style="color:black;"><span> :<font style="font-weight:bold">19/5/2003</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Nationality</span></td> 
+<td align="left" id="" style="color:black;"><span> :<font style="font-weight:bold">Egypt</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Faculty</span></td> 
+<td align="left" id="" style="color:black;"><span>:<font style="font-weight:bold">Faculty of Business Administration, Economics &amp; Political Science</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Award Programme</span></td> 
+<td align="left" id="" style="color:black;"><span>:<font style="font-weight:bold">Business Studies</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Marking/Classification Scale</span></td> 
+<td align="left" id="" style="color:black;"><span>:<font style="font-weight:bold">UK</font></span></td> 
+</tr><tr><td align="left" id="" style="color:black;"><span>Awarded Degree</span></td> <td align="left" id="" style="color:black;"><span>:<font style="font-weight:bold;">UK</font></span></td> </tr></tbody></table></div><b></b><div align="left" style="margin-top:5px;margin-bottom:5px;"><b>Programme Summary :</b></div><table id="StuCourses" name="StuCourses" border="1" align="center" cellpadding="2" cellspacing="0" bordercolor="black" bgcolor="FFFEF9" width="75%" style="background-image:url(../../../Images/watermark.gif); background-repeat:no-repeat;background-position: center center;"> 
+<tbody><tr bgcolor="#FEFADE"><td align="center" id="" style="color:black;"><span class="style1">Study Year</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Earned Credits</span></td> 
+<td align="center" id="" style="color:black;"><span class="style1">Average</span></td> 
+</tr><tr><td style="color:#000055;font-size:10pt;" class="style1">Business Administration/Preparatory Year</td><td>60 </td><td>60</td></tr></tbody></table><br><br><div style="font-size:10pt;"><b><u>Abbreviations on your transcript</u></b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>I</b> = Impaired Performance claim accepted but module incomplete, <b>IP</b> = Impaired Performance claim has been considered, <b>AP</b> = Appeal<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>CH</b> = Cheating penalty, <b>PL</b> = Plagiarism penalty, <b>MC</b> = Academic Misconduct penalty, <b>E</b> = Exemption for prior credit<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>C</b> = Condonement applied, <b>IN</b> = Inactive module, <b>Abs</b> = Absent, <b>IC</b> = Incomplete module (Transfer), <b>CA</b> = Compiled Attempt: marks for previously passed components combined with maximum marks of previously failed reassessed components to give the overall module mark.  (See GAR 13.11 &amp; 13.12). </div></div> 
+ 
+</div></div></body></html>

@@ -1,0 +1,100 @@
+
+<html><head><script>parent.document.all('dataFrame').style.display='';</script> 
+   
+ <style> 
+.Button   {BORDER:#DB7F00 1px solid;BACKGROUND-COLOR:#FFFAF3;BACKGROUND:url(/bue/Images/input_bg.gif)  repeat-x;FONT-SIZE:10pt;FONT-FAMILY:MS Sans Serif;CURSOR:HAND;} \
+  </style> 
+<style> 
+ BODY {  scrollbar-face-color: #FFFBF0;  scrollbar-highlight-color: #445476;  scrollbar-shadow-color: #445476;  scrollbar-3dlight-color: #FCF9EB;  scrollbar-arrow-color: #790000;  scrollbar-track-color: #FCF9EB;  scrollbar-darkshadow-color: #FCF9EB} 
+.LABEL   {font-size:8pt;font-family:microsoft sans serif;font-color:blue;} 
+ INPUT    {BORDER:#DB7F00 1px solid;BACKGROUND-COLOR:#FFFAF3; FONT-FAMILY:tahoma,sans-serif;FONT-SIZE:9pt;} 
+ SELECT   {font-size:8pt;font-family:microsoft sans serif} 
+ .Button   {border:1px outset;border:1px outset;CURSOR:HAND; FONT-FAMILY:tahoma,sans-serif;FONT-SIZE:11px;BACKGROUND:#e2f3ff;color:darkred;} 
+  @import url("Css/style.css");  .style1 {color: #990000; font-weight:bold;} 
+ .style2 { font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 12pt;  color: #336600;} 
+ .style3 {color: #003366; font-weight: bold;} 
+ .shadetabs{ 
+     padding: 3px; 
+     padding-left: 0;      margin-left: 0; 
+     margin-top: 1px; 
+     margin-bottom: 0; 
+     font: bold 12px Verdana; 
+     list-style-type: none; 
+     text-align: left 
+ } 
+  
+ .shadetabs li{ 
+     display: inline; 
+     margin: 0; 
+ 	float:left; 
+ } 
+  
+ .shadetabs li a{ 
+     text-decoration: none; 
+     padding: 3px; 
+     padding-right: 7px;      margin-right: 3px; 
+     border: 1px solid #777788; 
+     color: #2d2b2b; 
+     background: white url(../Images/shade.gif) top left repeat-x; 
+ } 
+  
+ .shadetabs li a:visited{ 
+     color: #2d2b2b; 
+ } 
+  
+ .shadetabs li a:hover{ 
+     text-decoration: underline; 
+     color: #2d2b2b; 
+ } 
+  
+ .shadetabs li.selected{ 
+     position: relative; 
+     top: 1px; 
+ } 
+  
+ .shadetabs li.selected a{ 
+     background-image: url(../Images/shadeactive.gif); 
+     border-bottom-color: white; 
+ } 
+  
+ .shadetabs li.selected a:hover { 
+     text-decoration: none; 
+ } 
+  
+ .tabcontentstyle { 
+     border: 1px solid gray; 
+     margin-bottom: 1em; 
+     padding: 10px; 
+     overflow-y: auto; 
+ } 
+  
+ .tabcontent { 
+     width: 100%; 
+     height: 250px; 
+     overflow-y: auto; 
+     border: 1px solid gray; 
+     display:none; 
+ 	float:left; 
+ } 
+  
+ @media print { 
+     .tabcontent { 
+         display:block!important; 
+     } 
+ } 
+</style> 
+ <script> 
+ function printD() 
+ { 
+     var pW = window.open("","PW", "width=750, height=550"); 
+     pW.document.write('<STYLE>  H2    {page-break-after: always}  span  {font-size:10pt;font-family:\"Arabic Transparent\"}</STYLE> <body dir=rtl scroll=no leftmargin=5 rightmargin=5 topmargin=5 bottommargin=5 oncontextmenu="return false" onkeydown="if(event.keyCode==17 ) return false">'+document.all('dvPrint').innerHTML);var WebBrowser='<OBJECT ID=WebBrowser1 WIDTH=0 HEIGHT=0 '+'CLASSID=CLSID:8856F961-340A-11D0-A96B-00C04FD705A2></OBJECT>'; 
+     pW.document.body.insertAdjacentHTML('beforeEnd', WebBrowser); 
+     pW.WebBrowser1.ExecWB(7,1); 
+     pW.WebBrowser1.outerHTML=''; 
+ } 
+ </script> 
+ </head> 
+ <body dir="ltr" style="margin:5 5 5 5;" marginwidth="0" marginheight="0">
+<button style="position:absolute;top:10; right:150 ;width:80;" class="button" onclick="printD()">Print</button><br><br><div id="dvPrint" name="dvPrint"><br><table dir="ltr" align="center" bgcolor="FFFEF9" width="100%" border="1" bordercolor="black" cellspacing="0" cellpadding="4"><tbody><tr bgcolor="#FBDCB2"><td colspan="6" style="font-weight:bold;" align="center">&nbsp;&nbsp;Ahmed Fouad Shaban Elkomy Hamouda (225721) , Semester 1,&nbsp;2022-2023</td></tr><tr bgcolor="#D1E7F7"><td align="center" style="font-weight:bold;">&nbsp;&nbsp;Date&nbsp;&nbsp;</td><td align="center" style="font-weight:bold;">Code</td><td align="center" style="font-weight:bold;">Module</td><td align="center" style="font-weight:bold;">&nbsp;Time&nbsp;</td><td align="center" style="font-weight:bold;">Committee</td><td align="center" style="font-weight:bold;">Seat</td></tr><tr bgcolor="#FDF7F1"><td align="center" valign="top">04/01/2023</td><td align="left" valign="top">22BBST05P</td><td valign="top" align="left">Introduction to Information Technology</td><td align="center" valign="top">10:00-12:00</td><td valign="top">&nbsp;&nbsp;GB02 LH2&nbsp;-&nbsp;GB02 LH2</td><td align="center" valign="top">71</td></tr><tr><td align="center" valign="top">09/01/2023</td><td align="left" valign="top">22BBST04P</td><td valign="top" align="left">Business Math</td><td align="center" valign="top">10:00-12:00</td><td valign="top">&nbsp;&nbsp;GB02 LH2&nbsp;-&nbsp;GB02 LH2</td><td align="center" valign="top">71</td></tr><tr bgcolor="#FDF7F1"><td align="center" valign="top">11/01/2023</td><td align="left" valign="top">22BBST03P</td><td valign="top" align="left">Business Communication</td><td align="center" valign="top">10:00-12:00</td><td valign="top">&nbsp;&nbsp;GB02 LH2&nbsp;-&nbsp;GB02 LH2</td><td align="center" valign="top">71</td></tr><tr><td align="center" valign="top">15/01/2023</td><td align="left" valign="top">22BBST01P</td><td valign="top" align="left">Introduction to Business</td><td align="center" valign="top">10:00-12:00</td><td valign="top">&nbsp;&nbsp;GB02 LH2&nbsp;-&nbsp;GB02 LH2</td><td align="center" valign="top">71</td></tr><tr bgcolor="#FDF7F1"><td align="center" valign="top">21/01/2023</td><td align="left" valign="top">22BBST02P</td><td valign="top" align="left">Introduction to Behavioural Sciences</td><td align="center" valign="top">10:00-12:00</td><td valign="top">&nbsp;&nbsp;GB02 LH2&nbsp;-&nbsp;GB02 LH2</td><td align="center" valign="top">71</td></tr></tbody></table></div> 
+ 
+</body></html>
