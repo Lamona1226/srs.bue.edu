@@ -41,6 +41,6 @@ Additional Features
     Implement AI-based chatbot for student queries
     Improve database security measures
 
-Disclaimer
+📢 Disclaimer
 
 This project is for educational purposes only and is not affiliated with the official university website. It is intended for learning web development and understanding how educational platforms work.
